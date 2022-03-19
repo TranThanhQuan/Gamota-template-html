@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mỹ Nữ Trấn Ma</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <script type="text/javascript">
+        var jsVer = 15;
+        var phoneWidth = parseInt(window.screen.width);
+        console.log(phoneWidth);
+        var phoneScale = phoneWidth/640;
+
+        if(phoneWidth < 768){
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)){
+                var version = parseFloat(RegExp.$1);
+                // andriod 2.3
+                if(version>2.3){
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+                }
+
+            } else {
+                console.log( phoneWidth );
+                document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+            }   
+
+        }else{
+            document.write('<meta name="viewport" content="width=768, minimum-scale =1, maximum-scale = 1, target-densitydpi=device-dpi">');
+        }
+    
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="container-top">
+            <div class="container-list">
+                <!-- <div class="row"> -->
+                    <!-- <a href="" class="container-item col-sm-4 col-md-4 col-lg-4"></a>
+                    <a href="" class="container-item col-sm-4 col-md-4 col-lg-4"></a>
+                    <a href="" class="container-item col-sm-4 col-md-4 col-lg-4"></a> -->
+                    <a href="" class="container-item"></a>
+                    <a href="" class="container-item"></a>
+                    <a href="" class="container-item"></a>
+                <!-- </div> -->
+            </div>
+            
+
+            <div class="container-text">
+                <h3>Thể lệ</h3>
+                <p>- Thời gian: 18:00 01/12 - 21h59 05/12/2021</p>
+                <p>- Người chơi khi nạp tiền sẽ nhận được lượt Vote, Lượt Vote dùng để tặng cho Top 20 thí sinh trên Landing</p>
+                <p>- Có 2 phương thức nạp để nhận lượt Vote</p>
+                <p>+ Nạp trực tiếp tại Landing, mục "Mua Lượt Chơi". Tỉ giá: 20k/lượt</p>
+                <p>+ Nạp theo các hình thức thông thường vào game 50k/ lượt</p>
+                <p>- Người chơi sau khi có vote có thể dùng tặng cho các thí sinh mình yêu thích để tìm ra TOP 3 thí sinh được nhiều vote nhất</p>
+                <p>- Ngoài ra sau mỗi lượt VOTE người chơi sẽ có 1 lượt quay 1 vật phẫm ngẫu nhiên trong Ingame. TOP 10 người Vote nhiều nhất sẽ 
+                    được nhận phần quà siêu giá trị từ BQT"</p>
+            </div>
+        </div>
+
+        <!-- MMMMMMMMMMMMMMMMMMMMMMMMMMMM     CONTAINER BOTTOM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM -->
+
+        <div class="container-bottom">
+            <div class="card-list row">
+                <div class="card top2-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+
+                <div class="card top1-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                
+                <div class="card top3-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+
+
+            <div class="rank-4-7">
+                <div class="card top4-7-card">
+                    <p class="rank-number">4</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top4-7-card">
+                    <p class="rank-number">5</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top4-7-card">
+                    <p class="rank-number">6</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top4-7-card">
+                    <p class="rank-number">7</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                
+                
+            </div>
+
+
+
+            <div class="rank-8-10">
+                <div class="card top8-10-card">
+                    <p class="rank-number">8</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top8-10-card">
+                    <p class="rank-number">9</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top8-10-card">
+                    <p class="rank-number">10</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <!--  -->
+
+
+            <!--top rank 11-15  -->
+            <div class="rank-11-15">
+                
+                <div class="card top11-15-card">
+                    <p class="rank-number">11</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top11-15-card">
+                    <p class="rank-number">12</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top11-15-card">
+                    <p class="rank-number">13</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top11-15-card">
+                    <p class="rank-number">14</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top11-15-card">
+                    <p class="rank-number">15</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            
+            <!--top rank 16-20  -->
+            <div class="rank-16-20">
+                            
+                <div class="card top16-20-card">
+                    <p class="rank-number">16</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top16-20-card">
+                    <p class="rank-number">17</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top16-20-card">
+                    <p class="rank-number">18</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top16-20-card">
+                    <p class="rank-number">19</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card top16-20-card">
+                    <p class="rank-number">20</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- MMMMMMMMMMMMMMMMMMMMMMMMMMMM     CONTAINER BOTTOM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM -->
+
+        <div class="container-bottom-mob">
+
+
+
+            <div class="card-list row">
+                <div class="card top2-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+
+                <div class="card top1-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                
+                <div class="card top3-card">
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-top-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="rank-4-5">
+                <div class="card-mob top4-5-card">
+                    <p class="rank-number">4</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+    
+                <div class="card-mob top4-5-card">
+                    <p class="rank-number">5</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="rank-6-8">
+                <div class="card-mob top6-8-card">
+                    <p class="rank-number">6</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+    
+                <div class="card-mob top6-8-card">
+                    <p class="rank-number">7</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card-mob top6-8-card">
+                    <p class="rank-number">8</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+
+            <!-- rank 9-10 -->
+            <div class="rank-9-10">
+                <div class="card-mob top9-10-card">
+                    <p class="rank-number">9</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+    
+                <div class="card-mob top9-10-card">
+                    <p class="rank-number">10</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- rank 11-13 -->
+            <div class="rank-11-13">
+                <div class="card-mob top11-13-card">
+                    <p class="rank-number">11</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+    
+                <div class="card-mob top11-13-card">
+                    <p class="rank-number">12</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card-mob top11-13-card">
+                    <p class="rank-number">13</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- rank 14-15 -->
+            <div class="rank-14-15">
+                <div class="card-mob top14-15-card">
+                    <p class="rank-number">14</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card-mob top14-15-card">
+                    <p class="rank-number">15</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- rank 16-18 -->
+            <div class="rank-16-18">
+                <div class="card-mob top16-18-card">
+                    <p class="rank-number">16</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+    
+                <div class="card-mob top16-18-card">
+                    <p class="rank-number">17</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card-mob top16-18-card">
+                    <p class="rank-number">18</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- rank 19-20 -->
+            <div class="rank-19-20">
+                <div class="card-mob top19-20-card">
+                    <p class="rank-number">19</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+
+                <div class="card-mob top19-20-card">
+                    <p class="rank-number">20</p>
+                    <img src="./img/nA4kCn9RSaScreenshot_20.png" alt="" class="avatar-img">
+                    <div class="card-text">
+                        <p>Tên: abcdd</p>
+                        <p>SBD: 1234</p>
+                        <p>S1 Mỹ hầu Vương</p>
+                    </div>
+                    <a href="" class="btn-tanghoa"><img src="./img/btn-tanghoa.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

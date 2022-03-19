@@ -1,0 +1,674 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    background-image: url("./../img/bg-pc.jpg");
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #573f19;
+    width: 100%;
+    float: left;
+}
+
+
+.container-top {
+    margin-top: 782px;
+}
+
+.container-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.container-item{
+    padding: 0px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+}
+
+.container-item:nth-child(1){
+    background: url("./../img/btn-thele.png");
+    background-size: 100%;
+}
+
+.container-item:nth-child(2){
+    background: url("./../img/btn-huongdan.png");
+    background-size: 100%;
+}
+.container-item:nth-child(3){
+    background: url("./../img/btn-phanthuong.png");
+    background-size: 100%;
+}
+.container-item:hover{
+    transform: scale(1.2);
+
+}
+
+.container-item:nth-child(2){
+    margin: 0 0px;
+}
+
+.container-text {
+    margin-top: 50px;
+    width: 800px;
+    margin-left: 165px;
+}
+
+.container-text h3 {
+    text-align: center;
+}
+
+.container-bottom {
+    margin-top: 275px;
+}
+
+.container-bottom-mob {
+    display: none;
+}
+
+
+.btn-tanghoa:hover {
+    transform: translateX(2px);
+    filter: brightness(120%);
+}
+
+/* MMMMM              TOP RANK            MMMMMMMMMMMMMMMMMMM */
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 100%;
+    border: none;
+    position: relative;
+    width: 300px;
+    height: 460px;
+}
+
+.top1-card{
+    background-image: url("./../img/1.png");
+    margin-bottom: 80px;
+}
+
+.top2-card{
+    background-image: url("./../img/2.png");
+}
+
+.top3-card{
+    background-image: url("./../img/3.png");
+}
+
+
+.avatar-img {
+    position: absolute;
+    left: 85px;
+    top: 120px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.card-top-text {
+    position: absolute;
+    left: 90px;
+    top: 300px;
+}
+
+.card-top-text p{
+    margin: 0px;
+    color: #fff;;
+}
+
+.btn-tanghoa {
+    position: absolute;
+    left: 95px;
+    top: 367px;
+}
+
+.card .btn-tanghoa img{
+    width: 100px;
+    height: 40px;
+}
+/* MMMMM             END TOP RANK            MMMMMMMMMMMMMMMMMMM */
+
+
+
+/* MMMMM              RANK 4 -> 7            MMMMMMMMMMMMMMMMMMM */
+
+.rank-4-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 15px; */
+}
+
+
+.top4-7-card {
+    background-image: url("./../img/4-10.png");
+}
+
+.rank-4-7 .card {
+    height: 390px;
+}
+
+.top4-7-card .avatar-img {
+    position: absolute;
+    left: 74px;
+    top: 73px;
+}
+
+.top4-7-card .rank-number {
+    position: absolute;
+    left: 65px;
+    top: 15px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.top4-7-card .card-text {
+    position: absolute;
+    left: 87px;
+    top: 238px;
+}
+
+.top4-7-card .card-text p {
+    margin: 0px;
+    color:#fff;
+    font-size: 14px;
+}
+
+.top4-7-card .btn-tanghoa {
+    position: absolute;
+    left: 80px;
+    top: 300px;
+}
+
+/* MMMMM             END RANK 4 -> 7            MMMMMMMMMMMMMMMMMMM */
+
+
+
+/* MMMMM              RANK 8 -> 10            MMMMMMMMMMMMMMMMMMM */
+.rank-8-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top8-10-card {
+    background-image: url("./../img/4-10.png");
+}
+
+
+.top8-10-card .avatar-img {
+    position: absolute;
+    left: 85px;
+    top: 83px;
+}
+
+.top8-10-card .rank-number {
+    position: absolute;
+    left: 70px;
+    top: 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.top8-10-card:last-child .rank-number {
+    left: 60px;
+
+}
+
+.top8-10-card .card-text {
+    position: absolute;
+    left: 100px;
+    top: 258px;
+}
+
+.top8-10-card .card-text p {
+    margin: 0px;
+    color:#fff;
+    font-size: 14px;
+}
+
+.top8-10-card .btn-tanghoa {
+    position: absolute;
+    left: 95px;
+    top: 324px;
+}
+
+/* MMMMM             END RANK 8 -> 10            MMMMMMMMMMMMMMMMMMM */
+
+
+
+/* MMMMM              RANK 11 -> 15            MMMMMMMMMMMMMMMMMMM */
+.rank-11-15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.rank-11-15 .card {
+    height: 320px;
+}
+
+.top11-15-card {
+    background-image: url("./../img/11-20.png");
+}
+
+
+.top11-15-card .avatar-img {
+    position: absolute;
+    left: 63px;
+    top: 62px;
+    width: 97px;
+    height: 97px;
+}
+
+
+.top11-15-card .rank-number {
+    position: absolute;
+    left: 47px;
+    top: 18px;
+    color: #fff;
+    font-size: 25px;
+}
+
+
+.top11-15-card .card-text {
+    position: absolute;
+    left: 60px;
+    top: 190px;
+}
+
+.top11-15-card .card-text p {
+    margin: 0px;
+    color:#fff;
+    font-size: 12px;
+}
+
+.top11-15-card .btn-tanghoa {
+    position: absolute;
+    left: 63px;
+    top: 241px;
+}
+
+.top11-15-card .btn-tanghoa img{
+    width: 80px;
+    height: 30px;
+}
+
+
+/* MMMMM             END RANK 11 -> 15            MMMMMMMMMMMMMMMMMMM */
+
+
+
+/* MMMMM              RANK 16 -> 120            MMMMMMMMMMMMMMMMMMM */
+.rank-16-20 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom:310px;
+}
+
+.top16-20-card {
+    background-image: url("./../img/11-20.png");
+}
+
+.rank-16-20 .card {
+    height: 320px;
+}
+
+.top16-20-card .avatar-img {
+    position: absolute;
+    left: 63px;
+    top: 62px;
+    width: 97px;
+    height: 97px;
+}
+
+
+.top16-20-card .rank-number {
+    position: absolute;
+    left: 47px;
+    top: 18px;
+    color: #fff;
+    font-size: 25px;
+}
+
+
+.top16-20-card .card-text {
+    position: absolute;
+    left: 60px;
+    top: 190px;
+}
+
+.top16-20-card .card-text p {
+    margin: 0px;
+    color:#fff;
+    font-size: 12px;
+}
+
+.top16-20-card .btn-tanghoa {
+    position: absolute;
+    left: 63px;
+    top: 241px;
+}
+
+.top16-20-card .btn-tanghoa img{
+    width: 80px;
+    height: 30px;
+}
+
+
+
+@media screen and (min-width: 1900px) {
+    .container-top{
+        margin-top: 1000px;
+    }
+
+    .container-text{
+        margin-top: 100px;
+    }
+
+    .container-bottom{
+        margin-top: 400px;
+    }
+
+    .rank-4-7{
+        margin-top: 200px;
+    }
+    .rank-8-10{
+        margin-top: 100px;
+    }
+
+    .rank-11-15{
+        margin-top: 150px;
+    }
+    .rank-16-20{
+        margin-bottom: 600px;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1890px) {
+    .container-top{
+        margin-top: 850px;
+    }
+
+    .container-text{
+        margin-top: 80px;
+    }
+
+    .container-bottom{
+        margin-top: 300px;
+    }
+
+    .rank-4-7{
+        margin-top: 100px;
+    }
+    .rank-8-10{
+        margin-top: 30px;
+    }
+
+    .rank-11-15{
+        margin-top: 100px;
+    }
+    .rank-16-20{
+        margin-top: 100px;
+        margin-bottom: 390px;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1599px) {
+
+}
+
+
+@media screen and (max-width: 700px){
+    .wrapper{
+        background-image: url("./../img/bg-mob.jpg");
+    }
+
+    .container-text{
+        width: 460px;
+        height: 280px;
+        margin-left: 50px;
+        margin-top: 70px;
+        overflow: scroll;        
+    }
+
+    .container-bottom{
+        display: none;
+    }
+
+    .container-bottom-mob{
+        display: block;
+        margin-top: 240px;
+    }
+
+    .card-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-list .card {
+        width: 180px;
+    }
+
+    .avatar-img {
+        width: 80px;
+        height: 80px;
+        top: 70px;
+        left: 50px;
+    }
+
+    .card-top-text {
+        top: 180px;
+        left: 50px;
+    }
+
+    .card-top-text p  {
+        font-size: 10px;
+    }
+
+
+    .btn-tanghoa {
+        top: 225px;
+        left: 50px;
+    }
+
+    .card .btn-tanghoa img {
+        width: 80px;
+        height: 30px;
+    }
+
+    .card{
+        height: 280px;
+    }
+
+/* /////// Card bottom /// */
+
+
+    .card-mob {
+        position: relative;
+        width: 170px;
+        height: 235px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .rank-number {
+        position: absolute;
+        top: 4px;
+        left: 38px;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .card-text {
+        left: 48px;
+        top: 144px;
+        position: absolute;
+        color: #fff;
+    }
+
+    .card-text p {
+        margin: 0px;
+        font-size: 10px;
+    }
+
+    .card-mob .avatar-img {
+        left: 50px;
+        top: 50px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-mob .btn-tanghoa{
+        top: 188px;
+        left: 40px;
+    }
+
+    .card-mob .btn-tanghoa img {
+        width: 80px;
+        height: 30px;
+    }
+
+
+    /* rank 4-5 */
+
+    .rank-4-5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .top4-5-card {
+        background-image: url("./../img/4-10.png");
+    }
+
+
+    /* rank 6-8 */
+
+    .rank-6-8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        /* margin-bottom: 500px; */
+    }
+
+    .top6-8-card {
+        background-image: url("./../img/4-10.png");
+    }
+
+    /* rank 9-10 */
+
+    .rank-9-10 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .top9-10-card {
+        background-image: url("./../img/4-10.png");
+    }
+
+    .top9-10-card:last-child .rank-number {
+        left: 28px;
+    }
+
+    /* rank 11-13 */
+
+    .rank-11-13 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 170px;
+    }
+
+    .top11-13-card {
+        background-image: url("./../img/11-20.png");
+    }
+
+    .top11-13-card .rank-number {
+        left: 28px;
+    }
+
+
+    /* rank 14-15 */
+
+    .rank-14-15 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .top14-15-card {
+        background-image: url("./../img/11-20.png");
+    }
+
+    .top14-15-card .rank-number {
+        left: 28px;
+    }
+
+    /* rank 16-18 */
+
+    .rank-16-18 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .top16-18-card {
+        background-image: url("./../img/11-20.png");
+    }
+
+    .top16-18-card .rank-number {
+        left: 28px;
+    }
+
+
+    /* rank 19-20 */
+
+    .rank-19-20 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 160px;
+    }
+
+    .top19-20-card {
+        background-image: url("./../img/11-20.png");
+    }
+
+    .top19-20-card .rank-number {
+        left: 28px;
+    }
+
+}
