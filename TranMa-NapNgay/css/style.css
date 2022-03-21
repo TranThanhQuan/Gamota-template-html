@@ -190,7 +190,7 @@
 
 @media screen and (min-width: 1900px) {
     .top-list{
-        margin-top: 378px;
+        margin-top: 375px;
     }
     .tiendo-item:nth-child(1) {
         bottom: 80px;
@@ -267,7 +267,7 @@
 
 @media screen and (min-width: 1500px) and (max-width: 1599px){
     .top-list{
-        margin-top: 250px;
+        margin-top: 240px;
     }
     .tiendo-list {
         position: relative;
@@ -311,7 +311,6 @@
 @media screen and (max-width: 768px){
     .wrapper{
         background-image: url(/img/bg-mob.jpg);
-        /* height: 2000px; */
         height: auto;
     }
     .dangxuat {
@@ -320,7 +319,7 @@
         margin-top: 25px;
     }
     
-    .dangnhap {
+    .dangnhap_mob {
         /* display: none; */
     }
 
@@ -396,7 +395,7 @@
     
     .menu-mobile-item {
         width: 100px;
-        height: 100px;
+        height: 96px;
     }
 
 }
