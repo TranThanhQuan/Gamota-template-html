@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Tân Ngọa Long</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- link sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <script type="text/javascript">
+        var jsVer = 15;
+        var phoneWidth = parseInt(window.screen.width);
+        console.log(phoneWidth);
+        var phoneScale = phoneWidth/640;
+
+        if(phoneWidth < 768){
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)){
+                var version = parseFloat(RegExp.$1);
+                // andriod 2.3
+                if(version>2.3){
+                    document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+                }
+
+            } else {
+                console.log( phoneWidth );
+                document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+            }   
+
+        }else{
+            document.write('<meta name="viewport" content="width=768, minimum-scale =1, maximum-scale = 1, target-densitydpi=device-dpi">');
+        }
+    
+    </script>
+
+</head>
+<body>
+<div class="wrapper" id="top">
+    <div class="container-fluid">
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a href="">
+                        <img src="/img/logo-user.png" alt="">
+                    </a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="">
+                        <img src="/img/btn-taigame.png" alt="">
+                    </a>
+                </li>
+    
+                <li class="navbar-item">
+                    <a href="">
+                        <img src="/img/btn-home.png" alt="">
+                    </a>
+                </li>
+    
+                <li class="navbar-item">
+                    <a href="">
+                        <img src="/img/btn-fb.png" alt="">
+                    </a>
+                </li>
+    
+                <li class="navbar-item menu-icon" onclick="modalmenu()">
+                    <img src="/img/btn-menu.png" alt="">
+                    <!-- <a href="">
+                    </a> -->
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="btn-dangkysom">
+            <a href=""><img src="/img/btn-dangkysom.png" alt=""></a>
+        </div>
+
+        <div class="chieumochuhau" id="chieumochuhau">
+            <div class="chieumo-text">
+                Các Chúa Công liên minh để nhận các món quà khi đạt mốc <br>
+                Hiện đã có 
+                <span class="chieumo-text-number">106526</span> 
+                Chúa công tham gia
+            </div>
+
+            <div class="chieumo-map">
+                <img src="/img/lac-duong.png" alt="" class="lacduong disable">
+                <div class="lacduong-gift disable">
+                    <img src="/img/gift-hover.png" alt="">
+                    <a href="" class="gift1"></a>
+                    <a href="" class="gift2"></a>
+                </div>
+
+                <img src="/img/hua-xuong.png" alt="" class="huaxuong">
+                <div class="huaxuong-gift">
+                    <img src="/img/gift-hover.png" alt="">
+                    <a href="" class="gift1"></a>
+                    <a href="" class="gift2"></a>
+                    <a href="" class="gift3"></a>
+                </div>
+
+                <img src="/img/kien-nghiep.png" alt="" class="kiennghiep">
+                <div class="kiennghiep-gift">
+                    <img src="/img/gift-hover.png" alt="">
+                    <a href="" class="gift1"></a>
+                    <a href="" class="gift2"></a>
+                    <a href="" class="gift3"></a>
+                </div>
+
+                <img src="/img/thanh-do.png" alt="" class="thanhdo disable">
+                <div class="thanhdo-gift disable">
+                    <img src="/img/gift-hover.png" alt="">
+                    <a href="" class="gift1"></a>
+                    <a href="" class="gift2"></a>
+                    <a href="" class="gift3"></a>
+
+                </div>
+
+                <img src="/img/tu-chau.png" alt="" class="tuchau">
+                <div class="tuchau-gift">
+                    <img src="/img/gift-hover.png" alt="">
+                    <a href="" class="gift1"></a>
+                    <a href="" class="gift2"></a>
+                    <a href="" class="gift3"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hoathanvinhan" id="hoathan">
+            <div class="hoathanvinhan-text">
+                <p>Chúa Công hóa thân thành nhân vật yêu thích</p>
+                <p>Chúa Công chọn các item phù hợp vào ảnh</p>
+            </div>
+        
+
+            <div class="hoathan-content">
+                <!-- <div class="character-list">
+                    <div class="character">
+                        <a href=""> <p class="character-name active">GIA CÁT LƯỢNG</p></a>
+                        <a href=""> <p class="character-name">QUAN VŨ</p></a>
+                        <a href=""> <p class="character-name">TIỂU KIỀU</p></a>
+                    </div>
+                    <div class="character-item">
+                        <a href=""><img src="/img/gcl-item1.png" alt=""></a>
+                        <a href=""><img src="/img/gcl-item2.png" alt=""></a>
+                        <a href=""><img src="/img/gcl-item3.png" alt=""></a>
+                    </div>
+                </div> -->
+
+
+                <div class="character-list">
+                    <div class="character">
+                        <p class="character-name active" id="character-gcl" onclick="herogcl()">GIA CÁT LƯỢNG</p>
+                        <p class="character-name" id="character-qv" onclick="heroqv()">QUAN VŨ</p>
+                        <p class="character-name" id="character-tk" onclick="herotk()">TIỂU KIỀU</p>
+
+                        <!-- <a href="" class="character-name active" id="character-gcl">GIA CÁT LƯỢNG</a>
+                        <a href="" class="character-name" id="character-qv">QUAN VŨ</a>
+                        <a href="" class="character-name" id="character-tk">TIỂU KIỀU</a> -->
+                    </div>
+
+                    <div class="character-item item-gcl show-item">
+                        <a href=""><img src="/img/gcl-item1.png" alt=""></a>
+                        <a href=""><img src="/img/gcl-item2.png" alt=""></a>
+                        <a href=""><img src="/img/gcl-item3.png" alt=""></a>
+                    </div>
+
+                    <div class="character-item item-qv">
+                        <a href=""><img src="/img/qv-item1.png" alt=""></a>
+                        <a href=""><img src="/img/qv-item2.png" alt=""></a>
+                        <a href=""><img src="/img/qv-item3.png" alt=""></a>
+                    </div>
+
+                    <div class="character-item item-tk">
+                        <a href=""><img src="/img/tk-item1.png" alt=""></a>
+                        <a href=""><img src="/img/tk-item2.png" alt=""></a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="form-input">
+                    <form>
+                        <input type="file" name="uploadfile" id="img" style="display:none;"/>
+                        <label for="img">CHỌN HÌNH ẢNH TẢI LÊN ĐỂ BẮT ĐẦU</label>
+                    </form>
+                </div>
+
+                <div class="hoathan-control">
+                    <!-- <a href="" class="btn-hoathan"><img src="/img/btn-thele.png" alt=""></a>
+                    <a href="" class="btn-hoathan"><img src="/img/btn-uploadanh.png" alt=""></a>
+                    <a href="" class="btn-hoathan"><img src="/img/btn-luuanh.png" alt=""></a> -->
+                    <img src="/img/btn-thele.png" alt=""class="btn-hoathan thele-btn" data-toggle="modal" data-target="#Modalthele">
+                    <img src="/img/btn-uploadanh.png" alt="" class="btn-hoathan">
+                    <img src="/img/btn-luuanh.png" alt=""  class="btn-hoathan">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="vongquaychiemtinh" id="quayso">
+            <div class="vongquaychiemtinh-text">
+                Hãy hoàn thành nhiệm vụ mỗi ngày để có lượt quay <br>
+                Chúa Công có 
+                <span class="vongquaychiemtinh-text-number">9999</span> 
+                lượt quay
+            </div>
+
+            <div class="quayso">
+             
+                <div class="quayso-gift">
+                    <div class="card1" id="card1">
+                        <img src="./img/1.png" alt="">
+                        <p>Điện thoại<br>iPhone 13 128GB</p>
+                    </div>
+
+                    <div class="card1" id="card2">
+                        <img src="./img/2.png" alt="">
+                        <p>Tai nghe<br>Bluetooth AirPods Pro</p>
+                    </div>
+
+                    <div class="card1" id="card3">
+                        <img src="./img/3.png" alt="">
+                        <p>Mô hình<br>Khổng Minh</p>
+                    </div>
+
+                    <div class="card1" id="card4">
+                        <img src="./img/4.png" alt="">
+                        <p>Loa<br>Bluetooth Sony</p>
+                    </div>
+
+                    <div class="card1" id="card5">
+                        <img src="./img/5.png" alt="">
+                        <p>Quà Danh Tướng<br>Ngẫu Nhiên</p>
+                    </div>
+                    <div class="btn-quayso"  id="btn-quayso">
+                        <img src="./img/btn-quayso.png" alt="" >
+                    </div>
+
+                     <div class="card1" id="card6">
+                        <img src="./img/6.png" alt="">
+                        <p> <br>Vàng</p>
+                    </div>
+
+                   <div class="card1" id="card7">
+                        <img src="./img/7.png" alt="">
+                        <p>Quà tài nguyên<br>lv3</p>
+                    </div>
+
+                    <div class="card1" id="card8">
+                        <img src="./img/8.png" alt="">
+                        <p> <br>Sổ Chiêu Hiền</p>
+                    </div>
+
+                    <div class="card1" id="card9">
+                        <img src="./img/9.png" alt="">
+                        <p>Tăng tốc thường<br>3 phút</p>
+                    </div>
+
+                    <div class="card1" id="card10">
+                        <img src="./img/10.png" alt="">
+                        <p>Chúc May Mắn<br>Lần Sau</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vongquay-control">
+                <!-- <a href="" class="btn-vongquay"><img src="/img/btn-thele2.png" alt=""></a>
+                <a href="" class="btn-vongquay"><img src="/img/btn-nhiemvu.png" alt=""></a>
+                <a href="" class="btn-vongquay"><img src="/img/btn-lichsu.png" alt=""></a>
+                <a href="" class="btn-vongquay"><img src="/img/btn-nhapcode.png" alt=""></a> -->
+
+                <img src="/img/btn-thele2.png" alt=""class="btn-vongquay" data-toggle="modal" data-target="#Modalthelevongquay">
+                <img src="/img/btn-nhiemvu.png" alt=""class="btn-vongquay" data-toggle="modal" data-target="#Modalnhiemvu">
+                <img src="/img/btn-lichsu.png" alt=""class="btn-vongquay" data-toggle="modal" data-target="#Modallichsu">
+                <img src="/img/btn-nhapcode.png" alt=""class="btn-vongquay" data-toggle="modal" data-target="#Modalnhapcode">
+
+            </div>
+
+            <div class="user-name">
+                Chào:
+                <span>ABCXYZ</span>
+            </div>
+        </div>
+
+        <div class="gioithieu-hero-mob" id="hero">
+            <div class="hero-mob">
+                <img class="mySlides" src="/img/lubo-mob.png" style="width:100%">
+                <img class="mySlides" src="/img/tumay-mob.png" style="width:100%">
+                <img class="mySlides" src="/img/tieukieu-mob.png" style="width:100%">
+                <img class="mySlides" src="/img/chudu-mob.png" style="width:100%">
+                <img class="mySlides" src="/img/giacatluong-mob.png" style="width:100%">
+ 
+            </div>
+
+            <div class="arrow">
+                <img src="/img/arrow-left.png" alt="" class="arrow-left" onclick="plusDivs(-1)">
+                <img src="/img/arrow-right.png" alt="" class="arrow-right" onclick="plusDivs(1)">
+            </div>
+            <div class="all-heros">
+                <img src="/img/btn-xemtuong.png" alt="">
+            </div>
+        </div>
+
+        <div class="soldiers">
+            <ul class="soldiers-list">
+                <li class="soldiers-item">
+                    <img src="/img/bobinh.png" alt="">
+                </li>
+
+                <li class="soldiers-item">
+                    <img src="/img/cungbinh.png" alt="">
+                </li>
+
+                <li class="soldiers-item">
+                    <img src="/img/kybinh.png" alt="">
+                </li>
+
+                <li class="soldiers-item">
+                    <img src="/img/quanvan.png" alt="">
+                </li>
+                <li class="soldiers-item">
+                    <img src="/img/thuongbinh.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+ <div class="tinhnangnoibat">
+    <img src="/img/f6-mb.png" alt="" class="tinhnang-fg">
+    <div class="tinhnanglist single-item">
+        <img src="/img/1-mb.jpg" alt="">
+        <img src="/img/2-mb.jpg" alt="">
+        <img src="/img/3-mb.jpg" alt="">
+        <img src="/img/4-mb.jpg" alt="">
+        <img src="/img/5-mb.jpg" alt="">
+    </div>
+
+
+
+
+    <!-- <div class="container-fluid"> -->
+        <div class="footer" id="footer">
+            <ul class="socials-list">
+                <li class="social-item">
+                    <a href=""><img src="/img/btn-congdong.png" alt=""></a>
+                </li>
+
+                <li class="social-item">
+                    <a href=""><img src="/img/btn-fanpage.png" alt=""></a>
+                </li>
+                <li class="social-item">
+                    <a href=""><img src="/img/btn-youtube.png" alt=""></a>
+                </li>
+            </ul>
+
+            <div class="coppyright-logo">
+                <img src="/img/logovng.png" alt="">
+                <img src="/img/logo-uqee.png" alt="">
+            </div>
+
+            <div class="coppyright">
+                
+
+                <span class="coppyright-text">Bản quyền thuộc Công Ty Công ty Shanghai UQEE Network Co., Ltd <br>
+                    Phát hành duy nhất tại Việt Nam bởi CÔNG TY CỔ PHẦN VNG <br>
+                    Giấy phép cung cấp dịch vụ trò chơi điện tử G1 trên mạng số: 306/QĐ-BTTTT do Bộ Thông Tin và Thuyền Thông cấp ngày ngày 21/2/2022</span>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- modal the le HOA THAN VI NHAN-->
+<div class="modal fade" id="Modalthele" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-thele modal-thele-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-thele-bg">
+                    <button type="button" class="close close-thele" data-dismiss="modal" aria-label="Close">
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                    
+                    <div class="modal-thele-text">
+                        <h3 class="title">MODAL THỂ LỆ HÓA THÂN VĨ NHÂN....</h3>
+                       <div class="modal-thele-content">
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                       </div>
+                    </div>
+
+                        <!-- <div class="modal-thele-content">
+                            <h4 class="ten-de-muc">I. Thời gian diễn ra sự kiện:</h4>
+                            
+                            <div class="">
+                                <div class="muc-1">
+                                    <p>- Thời gian tính nạp:</p>
+                                    <p>10h00 ngày 03/03/2022</p>
+                                </div>
+                            
+                                <div class="muc-1">
+                                    <p>- Sự kiện diễn ra từ:</p>
+                                    <p>10h00 ngày 03/03/2022 đến 23h00 ngày 09/03/2022</p>
+                                </div>
+                           
+                                <div class="muc-1">
+                                    <p>- Thời gian kết thúc đổi thưởng:</p>
+                                    <p>23h00 ngày 10/03/2022</p>
+                                </div>
+                            </div>
+
+                            <h4 class="ten-de-muc">II. Thể lệ</h4>
+                            <p class="">Trong thời gian diễn ra sự kiện, mỗi lần user nạp đủ 10.000 VNĐ nạp 
+                                        vào game sẽ nhận được 1 lượt tặng Hoa. Mỗi lượt tặng hoa sẽ nhận được 
+                                        tích điểm ngẫu nhiên</p>
+
+                            <p class="">Chỉ tính trên trang nạp:
+                                    <a href="https://nap.gamota.com/">https://nap.gamota.com/</a>
+                            </p>
+                            <p class="">Top 1-10 người chơi có lượt tặng hoa nhiều nhất sẽ nhận thêm phần thưởng</p>
+
+
+                            <h4 class="ten-de-muc">III. Lưu ý</h4>
+
+                            <p>Mỗi phần quà chỉ được đổi 5 lần trong suốt thời gian diễn ra sự kiện</p>
+                            <p>Quà TOP sẽ được phát sau khi kết thúc sự kiện 48 tiếng</p>
+                        </div> -->
+                 </div>
+            </div>
+        </div>
+</div>
+
+
+<!-- modal the le VONG QUAY CHIEM TINH-->
+<div class="modal fade" id="Modalthelevongquay" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-thele modal-thele-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-thele-bg">
+                    <button type="button" class="close close-thele" data-dismiss="modal" aria-label="Close">
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                    
+                    <div class="modal-thele-text">
+                        <h3 class="title">MODAL THỂ LỆ VÒNG QUAY CHIÊM TINH....</h3>
+                       <div class="modal-thele-content">
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                       </div>
+                    </div>
+
+                        
+                 </div>
+            </div>
+        </div>
+</div>
+
+
+<!-- modal NHIEM VU-->
+<div class="modal fade" id="Modalnhiemvu" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-thele modal-thele-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-thele-bg">
+                    <button type="button" class="close close-thele" data-dismiss="modal" aria-label="Close">
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                    
+                    <div class="modal-thele-text">
+                        <h3 class="title">MODAL NHIỆM VỤ....</h3>
+                       <div class="modal-thele-content">
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                       </div>
+                    </div>
+
+                        
+                 </div>
+            </div>
+        </div>
+</div>
+
+<!-- modal LICH SU-->
+<div class="modal fade" id="Modallichsu" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-thele modal-thele-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-thele-bg">
+                    <button type="button" class="close close-thele" data-dismiss="modal" aria-label="Close">
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                    
+                    <div class="modal-thele-text">
+                        <h3 class="title">MODAL LỊCH SỬ....</h3>
+                       <div class="modal-thele-content">
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                       </div>
+                    </div>
+
+                        
+                 </div>
+            </div>
+        </div>
+</div>
+
+<!-- modal NHAP CODE-->
+<div class="modal fade" id="Modalnhapcode" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-thele modal-thele-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-thele-bg">
+                    <button type="button" class="close close-thele" data-dismiss="modal" aria-label="Close">
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                    
+                    <div class="modal-thele-text">
+                        <h3 class="title">MODAL NHẬP CODE....</h3>
+                       <div class="modal-thele-content">
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                            <h2>.</h2>
+                       </div>
+                    </div>
+
+                        
+                 </div>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal-menu">
+    <ul class="menu-list" id="menu-list">
+        <li class="menu-item"><a href="#top">Đăng Ký</a></li>
+        <li class="menu-item"><a href="#chieumochuhau">Mốc Đăng Ký</a></li>
+        <li class="menu-item"><a href="#hoathan">Hóa Thân</a></li>
+        <li class="menu-item"><a href="#quayso">Quay Số</a></li>
+        <li class="menu-item"><a href="#hero">Tướng</a></li>
+        <li class="menu-item"><a href="#footer">Tính Năng</a></li>
+    </ul>
+</div>
+
+<div class="right-bar"  id="arrow-bar">
+    <img src="/img/arrow-right.png" alt="" onclick="rightbar()">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="/js/script_index.js"></script>
+</body>
+</html>
