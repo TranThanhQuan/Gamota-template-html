@@ -44,9 +44,6 @@ if (window.innerWidth < 768) {
 
 
 
-
-
-
 //vòng quay số
 
 $(document).ready(function(){
@@ -187,3 +184,55 @@ function herotk() {
 
 $('.single-item').slick();
 
+//////////
+
+$(document).ready(function() {
+  getDataClient();
+});
+
+
+
+
+
+function getDataClient (){
+  $.ajax({
+      url : 'http://loanthe.gamota/api/getDataClient.php',
+      type: 'POST',
+      data: 'allow='+1,
+      dataType: 'json',
+      beforeSend:function(){
+      },
+      success: function(data){
+          // console.log(user_login);
+          let user_login = data.data.user_login;
+            console.log(user_login);
+            var userinfo = 0;
+
+          if(user_login.is_login == 0){
+            
+            userinfo = `Vui lòng đăng nhập`;
+          }
+
+          else{
+            userinfo =`Chào: ${user_login.username}`
+          }
+          $("#userinfo").html(userinfo);
+          
+      },   
+      complete: function(){
+          
+      }
+  });
+}
+
+
+
+
+function setValue(userLogin){
+  console.log(userLogin);
+}
+
+
+function test(){
+  console.log(userLogin);
+}
